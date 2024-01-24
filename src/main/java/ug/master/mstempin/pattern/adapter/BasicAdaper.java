@@ -1,6 +1,6 @@
 package ug.master.mstempin.pattern.adapter;
 
-import ug.master.mstempin.model.basic.Basic;
+import ug.master.mstempin.pattern.adapter.model.basic.Basic;
 
 public class BasicAdaper extends ClientObject {
     private Basic basic;

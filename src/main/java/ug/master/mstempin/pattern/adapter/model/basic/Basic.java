@@ -1,4 +1,4 @@
-package ug.master.mstempin.model.basic;
+package ug.master.mstempin.pattern.adapter.model.basic;
 
 public class Basic {
 

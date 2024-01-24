@@ -1,8 +1,8 @@
 package ug.master.mstempin.pattern.adapter;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import ug.master.mstempin.model.advanced.Advanced;
-import ug.master.mstempin.model.basic.Basic;
+import ug.master.mstempin.pattern.adapter.model.advanced.Advanced;
+import ug.master.mstempin.pattern.adapter.model.basic.Basic;
 
 public class AdapterService {
 

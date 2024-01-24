@@ -2,7 +2,7 @@ package performence.adapter;
 
 import ug.master.mstempin.pattern.adapter.AdapterService;
 
-public class PerformenceTest {
+public class PerformanceTest {
 
     private static final AdapterService service = AdapterService.getInstance();
 
@@ -14,8 +14,8 @@ public class PerformenceTest {
 //            advancedAdapterWith();
 //            advancedAdapterWithout_BIG_DATA();
 //            advancedAdapterWith_BIG_DATA();
-            advancedAdapterWithout_HUGE_DATA();
-//            advancedAdapterWith_HUGE_DATA();
+//            advancedAdapterWithout_HUGE_DATA();
+            advancedAdapterWith_HUGE_DATA();
         }
     }
 

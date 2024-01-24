@@ -1,6 +1,6 @@
-package ug.master.mstempin.model.advanced;
+package ug.master.mstempin.pattern.adapter.model.advanced;
 
-import ug.master.mstempin.model.basic.Basic;
+import ug.master.mstempin.pattern.adapter.model.basic.Basic;
 
 public class Advanced {
 

@@ -1,6 +1,6 @@
 package ug.master.mstempin.pattern.adapter;
 
-import ug.master.mstempin.model.advanced.Advanced;
+import ug.master.mstempin.pattern.adapter.model.advanced.Advanced;
 
 public class AdvancedAdapter extends ClientObject {
 

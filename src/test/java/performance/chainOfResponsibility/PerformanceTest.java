@@ -1,4 +1,4 @@
-package performence.chainOfResponsibility;
+package performance.chainOfResponsibility;
 
 import ug.master.mstempin.pattern.chainOfResponsibility.ChainOfResponsibilityService;
 

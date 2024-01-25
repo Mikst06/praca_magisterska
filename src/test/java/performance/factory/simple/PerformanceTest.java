@@ -1,4 +1,4 @@
-package performence.factory.simple;
+package performance.factory.simple;
 
 import ug.master.mstempin.pattern.creational.CreationalService;
 import ug.master.mstempin.pattern.creational.factory.simple.SimpleFactory;

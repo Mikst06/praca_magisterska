@@ -1,4 +1,4 @@
-package performence.adapter;
+package performance.adapter;
 
 import ug.master.mstempin.pattern.adapter.AdapterService;
 

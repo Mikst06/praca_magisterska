@@ -8,7 +8,7 @@ import ug.master.mstempin.pattern.creational.abstractF.model.AbstractObject_C;
 import ug.master.mstempin.pattern.creational.abstractF.part.PartFactory;
 import ug.master.mstempin.pattern.creational.abstractF.part.PartFactoryI;
 
-public class AbstractFactory {
+public class AbstractFactory extends AbstractFactoryCreator {
 
     private static AbstractFactory instance;
 
@@ -21,7 +21,7 @@ public class AbstractFactory {
 
     PartFactoryI partFactory = PartFactory.getInstance();
 
-    public AbstractObject createObject(AbstractObjectType type) {
+    AbstractObject orderObject(AbstractObjectType type) {
         switch (type) {
             case A:
                 return new AbstractObject_A(partFactory);

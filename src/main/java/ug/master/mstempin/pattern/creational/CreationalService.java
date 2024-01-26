@@ -64,7 +64,27 @@ public class CreationalService {
                 part3D);
     }
 
-    public void createObjectByBuilder() {
+    public void createObjectByBuilder_1() {
+        BuilderObjectBuilder builder = new BuilderObjectBuilder();
+        builder.setByte1(new byte[60000]);
+        builder.setByte2(new byte[60000]);
+        builder.setByte3(new byte[60000]);
+        builder.setByte4(new byte[60000]);
+        builder.setByte5(new byte[60000]);
+        BuilderObject builderObject = builder.build();
+    }
+
+    public void createObjectWithoutBuilder_1() {
+        BuilderObject builderObject = new BuilderObject(
+                new byte[60000],
+                new byte[60000],
+                new byte[60000],
+                new byte[60000],
+                new byte[60000]
+        );
+    }
+
+    public void createObjectByBuilder_2() {
         BuilderObjectBuilder builder = new BuilderObjectBuilder();
         builder.setByte1(new byte[100000]);
         builder.setByte2(new byte[100000]);
@@ -74,13 +94,33 @@ public class CreationalService {
         BuilderObject builderObject = builder.build();
     }
 
-    public void createObjectWithoutBuilder() {
+    public void createObjectWithoutBuilder_2() {
         BuilderObject builderObject = new BuilderObject(
                 new byte[100000],
                 new byte[100000],
                 new byte[100000],
                 new byte[100000],
                 new byte[100000]
+        );
+    }
+
+    public void createObjectByBuilder_3() {
+        BuilderObjectBuilder builder = new BuilderObjectBuilder();
+        builder.setByte1(new byte[160000]);
+        builder.setByte2(new byte[160000]);
+        builder.setByte3(new byte[160000]);
+        builder.setByte4(new byte[160000]);
+        builder.setByte5(new byte[160000]);
+        BuilderObject builderObject = builder.build();
+    }
+
+    public void createObjectWithoutBuilder_3() {
+        BuilderObject builderObject = new BuilderObject(
+                new byte[160000],
+                new byte[160000],
+                new byte[160000],
+                new byte[160000],
+                new byte[160000]
         );
     }
 }

@@ -12,8 +12,8 @@ public class AbstractObject_C extends AbstractObject {
     }
 
     public void prepare(){
-        setPart1(getPartFactory().addPart1(Part1Type.A));
-        setPart2(getPartFactory().addPart2(Part2Type.A));
-        setPart3(getPartFactory().addPart3(Part3Type.A));
+        setPart1(getPartFactory().addPart1(Part1Type.C));
+        setPart2(getPartFactory().addPart2(Part2Type.C));
+        setPart3(getPartFactory().addPart3(Part3Type.C));
     }
 }

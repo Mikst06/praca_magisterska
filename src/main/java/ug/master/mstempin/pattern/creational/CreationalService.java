@@ -10,7 +10,10 @@ import ug.master.mstempin.pattern.creational.builder.BuilderObjectBuilder_100fie
 import ug.master.mstempin.pattern.creational.builder.model.BuilderObject;
 import ug.master.mstempin.pattern.creational.builder.model.BuilderObject_50field;
 import ug.master.mstempin.pattern.creational.builder.model.BuilderObject_100field;
+import ug.master.mstempin.pattern.creational.factory.simple.SimpleFactory;
+import ug.master.mstempin.pattern.creational.factory.simple.SimpleFactory2;
 import ug.master.mstempin.pattern.creational.factory.simple.model.BaseObjectD;
+import ug.master.mstempin.pattern.creational.factory.simple.model.BaseObjectType;
 
 public class CreationalService {
 
@@ -24,7 +27,7 @@ public class CreationalService {
     }
 
     public void createBaseObjectA() {
-        BaseObjectD baseObjectD = new BaseObjectD(new byte[900000]);
+        BaseObjectD baseObjectD = new BaseObjectD(new byte[800000]);
     }
 
     public void createBaseObjectB() {
@@ -33,6 +36,36 @@ public class CreationalService {
 
     public void createBaseObjectC() {
         BaseObjectD baseObjectD = new BaseObjectD(new byte[300000]);
+    }
+
+    public void createBaseObjectABySimpleFactory() {
+        SimpleFactory simpleFactory = new SimpleFactory();
+        simpleFactory.createObject(BaseObjectType.A);
+    }
+
+    public void createBaseObjectBBySimpleFactory() {
+        SimpleFactory simpleFactory = new SimpleFactory();
+        simpleFactory.createObject(BaseObjectType.B);
+    }
+
+    public void createBaseObjectCBySimpleFactory() {
+        SimpleFactory simpleFactory = new SimpleFactory();
+        simpleFactory.createObject(BaseObjectType.C);
+    }
+
+    public void createBaseObject_1_BySimpleFactory2() {
+        SimpleFactory2 simpleFactory = new SimpleFactory2();
+        simpleFactory.createObject(BaseObjectType.A);
+    }
+
+    public void createBaseObject_5_BySimpleFactory2() {
+        SimpleFactory2 simpleFactory = new SimpleFactory2();
+        simpleFactory.createObject(BaseObjectType.B);
+    }
+
+    public void createBaseObject_10_BySimpleFactory2() {
+        SimpleFactory2 simpleFactory = new SimpleFactory2();
+        simpleFactory.createObject(BaseObjectType.C);
     }
 
     public void createAbstractObjectA() {

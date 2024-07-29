@@ -7,7 +7,7 @@ import ug.master.mstempin.pattern.creational.abstractF.model.AbstractObjectType;
 public class PerformanceTest {
 
     private static final AbstractFactory abstractFactory = AbstractFactory.getInstance();
-    private static final CreationalService service = CreationalService.getInstance();
+    private static final CreationalService service = new CreationalService();
 
     public static void main(String[] args) {
         for (int i = 0; i < 1000000; i++) {

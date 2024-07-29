@@ -3,7 +3,7 @@ package performance.builder;
 import ug.master.mstempin.pattern.creational.CreationalService;
 
 public class PerformanceTest {
-    private static final CreationalService service = CreationalService.getInstance();
+    private static final CreationalService service = new CreationalService();
 
     public static void main(String[] args) {
         for (int i = 0; i < 1000000; i++) {
@@ -15,12 +15,13 @@ public class PerformanceTest {
 //
 //            builderObject_3();
 //            constructorObject_3();
+//            builderObject_3_Singleton();
 
 //            builderObject_3_50field();
 //            constructorObject_3_50field();
 
 //            builderObject_3_100field();
-            constructorObject_3_100field();
+//            constructorObject_3_100field();
         }
     }
 
@@ -41,6 +42,12 @@ public class PerformanceTest {
     }
 
     private static void builderObject_3() {
+        CreationalService service = new CreationalService();
+        service.createObjectByBuilder_3();
+    }
+
+    private static void builderObject_3_Singleton() {
+        CreationalService service = CreationalService.getInstance();
         service.createObjectByBuilder_3();
     }
 

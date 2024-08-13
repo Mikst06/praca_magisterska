@@ -1,14 +1,13 @@
 package ug.master.mstempin.pattern.adapter;
 
-import org.apache.commons.lang3.RandomStringUtils;
-import ug.master.mstempin.pattern.adapter.model.advanced.Advanced;
-import ug.master.mstempin.pattern.adapter.model.basic.Basic;
+import ug.master.mstempin.pattern.adapter.model.BaseObject300KB;
+import ug.master.mstempin.pattern.adapter.model.BaseObject500KB;
+import ug.master.mstempin.pattern.adapter.model.BaseObject800KB;
+import ug.master.mstempin.pattern.creational.factory.simple.model.BaseObjectC;
 
 public class AdapterService {
 
     private static AdapterService instance;
-    private final String bigString = RandomStringUtils.random(1000);
-    private final String hugeString = RandomStringUtils.random(10000);
 
     public static AdapterService getInstance() {
         if ( instance == null ) {
@@ -17,81 +16,45 @@ public class AdapterService {
         return instance;
     }
 
-    public void basicToClientObjectWithAdapter(){
-        Basic basic = new Basic("test", 123, true);
-        BasicAdaper basicAdaper = new BasicAdaper(basic);
-        basicAdaper.action();
+    public void _300KB_WithAdapter(){
+        BaseObject300KB baseObject300KB = new BaseObject300KB();
+        AdapterObject300KB adapterObject300KB = new AdapterObject300KB(baseObject300KB);
+        adapterObject300KB.action();
     }
 
-    public void advancedToClientObjectWithAdapter(){
-        Basic basic1 = new Basic("test", 123, true);
-        Basic basic2 = new Basic("test", 123, true);
-        Basic basic3 = new Basic("test", 123, true);
-        Advanced advanced = new Advanced(basic1, basic2, basic3);
-        AdvancedAdapter advancedAdapter = new AdvancedAdapter(advanced);
-        advancedAdapter.action();
-    }
-
-    public void basicToClientObjectWithoutAdapter(){
-        Basic basic = new Basic("test", 123, true);
+    public void _300KB_WithoutAdapter(){
+        BaseObject300KB baseObject300KB = new BaseObject300KB();
         ClientObject clientObject = new ClientObject(
-                basic.getF_string(),
-                basic.getF_integer(),
-                basic.getF_boolean());
+                baseObject300KB.getBaseByte()
+        );
         clientObject.action();
     }
 
-    public void advancedToClientObjectWithoutAdapter(){
-        Basic basic1 = new Basic("test", 123, true);
-        Basic basic2 = new Basic("test", 123, true);
-        Basic basic3 = new Basic("test", 123, true);
-        Advanced advanced = new Advanced(basic1, basic2, basic3);
+    public void _500KB_WithAdapter(){
+        BaseObject500KB baseObject500KB = new BaseObject500KB();
+        AdapterObject500KB adapterObject500KB = new AdapterObject500KB(baseObject500KB);
+        adapterObject500KB.action();
+    }
+
+    public void _500KB_WithoutAdapter(){
+        BaseObject500KB baseObject500KB = new BaseObject500KB();
         ClientObject clientObject = new ClientObject(
-                advanced.getA().getF_string() + advanced.getB().getF_string() + advanced.getC().getF_string(),
-                advanced.getA().getF_integer() + advanced.getB().getF_integer() + advanced.getC().getF_integer(),
-                advanced.getA().getF_boolean() && advanced.getB().getF_boolean() && advanced.getC().getF_boolean());
+                baseObject500KB.getBaseByte()
+        );
         clientObject.action();
     }
 
-    public void advancedToClientObjectWithAdapter_BIG_DATA(){
-        Basic basic1 = new Basic(bigString, 123, true);
-        Basic basic2 = new Basic(bigString, 123, true);
-        Basic basic3 = new Basic(bigString, 123, true);
-        Advanced advanced = new Advanced(basic1, basic2, basic3);
-        AdvancedAdapter advancedAdapter = new AdvancedAdapter(advanced);
-        advancedAdapter.action();
+    public void _800KB_WithAdapter(){
+        BaseObject800KB baseObject800KB = new BaseObject800KB();
+        AdapterObject800KB adapterObject800KB = new AdapterObject800KB(baseObject800KB);
+        adapterObject800KB.action();
     }
 
-    public void advancedToClientObjectWithoutAdapter_BIG_DATA(){
-        Basic basic1 = new Basic(bigString, 123, true);
-        Basic basic2 = new Basic(bigString, 123, true);
-        Basic basic3 = new Basic(bigString, 123, true);
-        Advanced advanced = new Advanced(basic1, basic2, basic3);
+    public void _800KB_WithoutAdapter(){
+        BaseObject800KB baseObject800KB = new BaseObject800KB();
         ClientObject clientObject = new ClientObject(
-                advanced.getA().getF_string() + advanced.getB().getF_string() + advanced.getC().getF_string(),
-                advanced.getA().getF_integer() + advanced.getB().getF_integer() + advanced.getC().getF_integer(),
-                advanced.getA().getF_boolean() && advanced.getB().getF_boolean() && advanced.getC().getF_boolean());
-        clientObject.action();
-    }
-
-    public void advancedToClientObjectWithAdapter_HUGE_DATA(){
-        Basic basic1 = new Basic(hugeString, 123, true);
-        Basic basic2 = new Basic(hugeString, 123, true);
-        Basic basic3 = new Basic(hugeString, 123, true);
-        Advanced advanced = new Advanced(basic1, basic2, basic3);
-        AdvancedAdapter advancedAdapter = new AdvancedAdapter(advanced);
-        advancedAdapter.action();
-    }
-
-    public void advancedToClientObjectWithoutAdapter_HUGE_DATA(){
-        Basic basic1 = new Basic(hugeString, 123, true);
-        Basic basic2 = new Basic(hugeString, 123, true);
-        Basic basic3 = new Basic(hugeString, 123, true);
-        Advanced advanced = new Advanced(basic1, basic2, basic3);
-        ClientObject clientObject = new ClientObject(
-                advanced.getA().getF_string() + advanced.getB().getF_string() + advanced.getC().getF_string(),
-                advanced.getA().getF_integer() + advanced.getB().getF_integer() + advanced.getC().getF_integer(),
-                advanced.getA().getF_boolean() && advanced.getB().getF_boolean() && advanced.getC().getF_boolean());
+                baseObject800KB.getBaseByte()
+        );
         clientObject.action();
     }
 }

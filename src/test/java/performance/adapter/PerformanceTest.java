@@ -8,32 +8,27 @@ public class PerformanceTest {
 
     public static void main(String[] args){
         for(int i = 0; i < 1000000; i++) {
-//            basicAdapterWithout();
-//            basicAdapterWith();
-//            advancedAdapterWithout();
-//            advancedAdapterWith();
-//            advancedAdapterWithout_BIG_DATA();
-//            advancedAdapterWith_BIG_DATA();
-//            advancedAdapterWithout_HUGE_DATA();
-            advancedAdapterWith_HUGE_DATA();
+            _300KB_WithoutAdapter();
+            _300KB_WithAdapter();
+            _500KB_WithoutAdapter();
+            _500KB_WithAdapter();
+            _800KB_WithoutAdapter();
+            _800KB_WithAdapter();
         }
     }
 
-    private static void basicAdapterWithout() {service.basicToClientObjectWithoutAdapter();}
-    private static void basicAdapterWith() {
-        service.basicToClientObjectWithAdapter();
+    private static void _300KB_WithoutAdapter() {service._300KB_WithoutAdapter();}
+    private static void _300KB_WithAdapter() {
+        service._300KB_WithAdapter();
     }
 
-    private static void advancedAdapterWithout() {service.advancedToClientObjectWithoutAdapter();}
-    private static void advancedAdapterWith() {
-        service.advancedToClientObjectWithAdapter();
+    private static void _500KB_WithoutAdapter() {service._500KB_WithoutAdapter();}
+    private static void _500KB_WithAdapter() {
+        service._500KB_WithAdapter();
     }
 
-    private static void advancedAdapterWithout_BIG_DATA() {service.advancedToClientObjectWithoutAdapter_BIG_DATA();}
-    private static void advancedAdapterWith_BIG_DATA() {
-        service.advancedToClientObjectWithAdapter_BIG_DATA();
+    private static void _800KB_WithoutAdapter() {service._800KB_WithoutAdapter();}
+    private static void _800KB_WithAdapter() {
+        service._800KB_WithAdapter();
     }
-
-    private static void advancedAdapterWithout_HUGE_DATA() {service.advancedToClientObjectWithoutAdapter_HUGE_DATA();}
-    private static void advancedAdapterWith_HUGE_DATA() {service.advancedToClientObjectWithAdapter_HUGE_DATA();}
 }

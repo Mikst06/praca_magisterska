@@ -8,12 +8,12 @@ public class PerformanceTest {
 
     public static void main(String[] args){
         for(int i = 0; i < 1000000; i++) {
-            _300KB_WithoutAdapter();
-            _300KB_WithAdapter();
-            _500KB_WithoutAdapter();
-            _500KB_WithAdapter();
+//            _300KB_WithoutAdapter();
+//            _300KB_WithAdapter();
+//            _500KB_WithoutAdapter();
+//            _500KB_WithAdapter();
             _800KB_WithoutAdapter();
-            _800KB_WithAdapter();
+//            _800KB_WithAdapter();
         }
     }
 

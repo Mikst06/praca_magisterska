@@ -1,10 +1,11 @@
 package ug.master.mstempin.pattern.composite.withoutPattern;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CompoundObject_without {
 
-    List<Object> objects;
+    List<Object> objects = new ArrayList<>();
 
     public void action() {
         for (Object object : objects) {

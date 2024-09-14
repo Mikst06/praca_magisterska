@@ -3,6 +3,8 @@ package ug.master.mstempin.pattern.decorator;
 import ug.master.mstempin.pattern.adapter.model.BaseObject300KB;
 import ug.master.mstempin.pattern.adapter.model.BaseObject500KB;
 import ug.master.mstempin.pattern.adapter.model.BaseObject800KB;
+import ug.master.mstempin.pattern.decorator.model.BaseObjectExtended;
+import ug.master.mstempin.pattern.decorator.model.BaseObjectExtendedExtended;
 
 public class DecoratorService {
 
@@ -55,12 +57,20 @@ public class DecoratorService {
         decoratorLevel2.action();
     }
 
+    public void _800KB_WithoutDecorator_2Level(){
+        BaseObjectExtended baseObjectExtended = new BaseObjectExtended(new byte[800000]);
+    }
+
     public void _800KB_WithDecorator_3Level(){
         BaseObject300KB baseObject300KB = new BaseObject300KB();
         DecoratorLevel1_300KB decoratorLevel1 = new DecoratorLevel1_300KB(baseObject300KB);
         DecoratorLevel2 decoratorLevel2 = new DecoratorLevel2(decoratorLevel1, new byte[250000]);
-        DecoratorLevel3 decoratorLevel3 = new DecoratorLevel3(decoratorLevel2, new byte[250000]);
+        DecoratorLevel2 decoratorLevel3 = new DecoratorLevel2(decoratorLevel2, new byte[250000]);
         decoratorLevel3.action();
+    }
+
+    public void _800KB_WithoutDecorator_3Level(){;
+        BaseObjectExtendedExtended baseObjectExtendedExtended = new BaseObjectExtendedExtended(new byte[800000]);
     }
 
     private void action(){

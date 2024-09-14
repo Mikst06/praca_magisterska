@@ -1,10 +1,11 @@
 package ug.master.mstempin.pattern.composite.withPattern;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CompoundObject implements BasicObjectI {
 
-    List<BasicObjectI> objects;
+    List<BasicObjectI> objects = new ArrayList<>();
 
     @Override
     public void action() {

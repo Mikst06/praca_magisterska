@@ -12,12 +12,12 @@ public abstract class Middleware {
         return first;
     }
 
-    public abstract boolean check(Integer number);
+    public abstract boolean check(byte[] byteOne);
 
-    protected boolean checkNext(Integer number) {
+    protected boolean checkNext(byte[] byteOne) {
         if (next == null) {
             return true;
         }
-        return next.check(number);
+        return next.check(byteOne);
     }
 }

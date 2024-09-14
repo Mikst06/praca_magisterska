@@ -15,7 +15,7 @@ public class PerformanceTest {
 //            _800KB_WithComposite();
 //            _800KB_WithoutComposite();
 //
-//            WithComposite_Level1();
+            WithComposite_Level1();
 //            WithoutComposite_Level1();
 //            WithComposite_Level2();
 //            WithoutComposite_Level2();

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Server {
-    private final List<Integer> numbers = new ArrayList<>();
+    private final List<byte[]> bytes = new ArrayList<>();
     private Middleware middleware;
 
     public void setMiddleware(Middleware middleware) {
@@ -13,8 +13,8 @@ public class Server {
 
     Boolean result;
     public void calculate() {
-        for (Integer number: numbers) {
-            if (middleware.check(number)) {
+        for (byte[] byteOne: bytes) {
+            if (middleware.check(byteOne)) {
                 result = true;
             } else {
                 result = false;
@@ -22,7 +22,7 @@ public class Server {
         }
     }
 
-    public void register(Integer number) {
-        numbers.add(number);
+    public void register(byte[] byteOne) {
+        bytes.add(byteOne);
     }
 }

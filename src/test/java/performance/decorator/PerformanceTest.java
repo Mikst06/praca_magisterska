@@ -17,7 +17,7 @@ public class PerformanceTest {
 //
             _800KB_WithDecorator_2Level();
 //            _800KB_WithDecorator_3Level();
-//            _800KB_WithoutDecorator_2Level();
+            _800KB_WithoutDecorator_2Level();
             _800KB_WithoutDecorator_3Level();
         }
     }
